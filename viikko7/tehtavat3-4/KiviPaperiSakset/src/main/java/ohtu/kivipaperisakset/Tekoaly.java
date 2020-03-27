@@ -1,6 +1,6 @@
 package ohtu.kivipaperisakset;
 
-public class Tekoaly {
+public class Tekoaly implements AI {
 
     int siirto;
 
@@ -8,6 +8,12 @@ public class Tekoaly {
         siirto = 0;
     }
 
+    @Override
+    public void asetaSiirto(String ekanSiirto) {
+        // ei tehdä mitään 
+    }
+
+    @Override
     public String annaSiirto() {
         siirto++;
         siirto = siirto % 3;
@@ -19,9 +25,5 @@ public class Tekoaly {
         } else {
             return "s";
         }
-    }
-
-    void asetaSiirto(String ekanSiirto) {
-        // ei tehdä mitään 
     }
 }
